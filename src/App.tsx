@@ -22,12 +22,7 @@ function App() {
     <>
     <section className=''>
       <div className='garrafa'>
-        <div className='quadrado'>{garrafaTipo[0].posicao1}</div>
-        <div className='quadrado'>{garrafaTipo[0].posicao2}</div>
-        <div className='quadrado'>{garrafaTipo[0].posicao3}</div>
-        <div className='quadrado'>{garrafaTipo[0].posicao4}</div>
         
-        <button>^</button>
       </div>
     </section>
      <section>
