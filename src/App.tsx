@@ -4,10 +4,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import type { GarrafaTypes } from './types'
-import GarrafaSuperior from './GarrafaSuperior'
 
 
-const garrafaTipo:Array<GarrafaTypes> = [
+const garrafaSuperior:Array<GarrafaTypes> = [
   {
     posicao1: "TESTE1",
     posicao2: "TESTE2",
@@ -16,26 +15,50 @@ const garrafaTipo:Array<GarrafaTypes> = [
   }
 ]
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const garrafaInferior:Array<GarrafaTypes> = [
+  {
+    posicao1: null,
+    posicao2: "TESTE1",
+    posicao3: "TESTE3",
+    posicao4: "TESTE4"
+  }
+]
+
+let quadrado : string = null;
+
+
+
+function App() {
+  const [quadradosuperior, setQuadradoSuperior] = useState(garrafaSuperior[0].posicao1)
+  const [quadradoInferior, setQuadradoInferior] = useState(0)
+function pegar(){
+  quadrado = garrafaSuperior[0].posicao1;
+  setQuadradoSuperior(null)
+
+}
   return (
     <>
     <section className=''>
       <div className='garrafa'>
-        <div className='quadrado'>{garrafaTipo[0].posicao1}</div>
-        <div className='quadrado'>{garrafaTipo[0].posicao2}</div>
-        <div className='quadrado'>{garrafaTipo[0].posicao3}</div>
-        <div className='quadrado'>{garrafaTipo[0].posicao4}</div>      </div>
+        <div className='quadrado'>{garrafaSuperior[0].posicao1}</div>
+        <div className='quadrado'>{garrafaSuperior[0].posicao2}</div>
+        <div className='quadrado'>{garrafaSuperior[0].posicao3}</div>
+        <div className='quadrado'>{garrafaSuperior[0].posicao4}</div>      </div>
+        <button onClick={pegar}>PEGAR</button>
     </section>
-     <section>
+
+    <div>{quadrado}</div>
+
+    <section className=''>
       <div className='garrafa'>
-        <div className='quadrado'></div>
-        <div className='quadrado'></div>
-        <div className='quadrado'>TESTE</div>
-        <button>^</button>
-      </div>
+        <div className='quadrado'>{garrafaInferior[0].posicao1}</div>
+        <div className='quadrado'>{garrafaInferior[0].posicao2}</div>
+        <div className='quadrado'>{garrafaInferior[0].posicao3}</div>
+        <div className='quadrado'>{garrafaInferior[0].posicao4}</div>      </div>
+        <button>ENTORNAR</button>
     </section>
+
     </>
   )
 }
