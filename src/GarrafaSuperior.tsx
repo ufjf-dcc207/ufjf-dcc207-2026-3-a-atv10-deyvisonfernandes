@@ -1,11 +1,11 @@
 import type { GarrafaTypes } from "./types"
 
-type GarrafaSuperiorProps = (
+type GarrafaSuperiorProps = {
     garrafa: GarrafaTypes
-)
-
+}
 
 export default function GarrafaSuperior({garrafa} : GarrafaSuperiorProps){
+    
     <div>
         <div className='quadrado'>{garrafa.posicao1}</div>
         <div className='quadrado'>{garrafa.posicao2}</div>

@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import type { GarrafaTypes } from './types'
+import GarrafaSuperior from './GarrafaSuperior'
 
 
 const garrafaTipo:Array<GarrafaTypes> = [
@@ -22,8 +23,10 @@ function App() {
     <>
     <section className=''>
       <div className='garrafa'>
-        
-      </div>
+        <div className='quadrado'>{garrafaTipo[0].posicao1}</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao2}</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao3}</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao4}</div>      </div>
     </section>
      <section>
       <div className='garrafa'>
