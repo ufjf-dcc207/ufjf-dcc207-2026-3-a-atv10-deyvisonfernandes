@@ -3,7 +3,7 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import { GarrafaTypes } from './types'
+import type { GarrafaTypes } from './types'
 
 
 const garrafaTipo:Array<GarrafaTypes> = [
@@ -22,9 +22,11 @@ function App() {
     <>
     <section className=''>
       <div className='garrafa'>
-        <div className='quadrado'>TESTE</div>
-        <div className='quadrado'>TESTE1</div>
-        <div className='quadrado'>TESTE2</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao1}</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao2}</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao3}</div>
+        <div className='quadrado'>{garrafaTipo[0].posicao4}</div>
+        
         <button>^</button>
       </div>
     </section>

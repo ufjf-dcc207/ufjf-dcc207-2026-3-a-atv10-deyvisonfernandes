@@ -4,3 +4,4 @@ export type GarrafaTypes = {
     posicao3: string;
     posicao4: string;
 }
+
